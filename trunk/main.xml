@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:padding="0dip"
+    android:weightSum="1">
+    <RelativeLayout android:layout_weight="1.06" android:layout_height="wrap_content" android:id="@+id/relativeLayout1" android:layout_width="fill_parent">
+        <Button android:background="@drawable/custom_button" android:textSize="30dp" android:id="@+id/start" android:text="start game" android:textColor="@drawable/button_text_color" android:layout_above="@+id/options" android:layout_centerHorizontal="true" android:layout_marginBottom="20dp" android:layout_width="250dp" android:layout_height="50dp"></Button>
+        <Button android:background="@drawable/custom_button" android:id="@+id/options" android:text="options" android:textColor="@drawable/button_text_color" android:textSize="30dp" android:layout_above="@+id/how" android:layout_centerHorizontal="true" android:layout_marginBottom="20dp" android:layout_width="250dp" android:layout_height="50dp"></Button>
+        <Button android:textColor="@drawable/button_text_color" android:layout_width="250dp" android:layout_height="50dp" android:background="@drawable/custom_button" android:text="how to play" android:id="@+id/how" android:textSize="30dp" android:layout_alignParentBottom="true" android:layout_alignLeft="@+id/options" android:layout_marginBottom="108dp"></Button>
+        <Button android:textColor="@drawable/button_text_color" android:textSize="30dp" android:layout_width="250dp" android:layout_height="50dp" android:background="@drawable/custom_button" android:id="@+id/hscores" android:layout_alignParentBottom="true" android:layout_alignLeft="@+id/how" android:layout_marginBottom="40dp" android:text="@string/menuhs"></Button>
+        <ImageView android:layout_height="250dp" android:id="@+id/imageView1" android:src="@drawable/logo" android:layout_width="300dp" android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_marginTop="17dp" android:layout_marginLeft="5dp"></ImageView>
+    </RelativeLayout>
+</LinearLayout>
