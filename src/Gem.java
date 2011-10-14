@@ -53,14 +53,17 @@ public class Gem implements Comparable<Gem> {
 		selected = false;
 	}
 	
+	//Whether type a equals type b
 	public boolean equalsType(Gem other) {
 		return other != null && this.GEM_TYPE == other.GEM_TYPE;
 	}
 	
+	//Whether num a equals type b
 	public boolean equalsType(int num) {
 		return this.GEM_TYPE == num;
 	}
 	
+	//Helps to call placements.
 	private static int placementHelper(int first, int second, int types) {
 		Random r = new Random();
 		int num = r.nextInt(types);
@@ -82,6 +85,7 @@ public class Gem implements Comparable<Gem> {
 		return placementHelper(first, second, types);
 	}
 	
+	//Checks the placement of new dead gems
 	public static int checkDeadPlacement(int curCol, Gem[] grid, int types) {
 		int first = -1;
 		if(curCol >= 2) {
@@ -92,14 +96,17 @@ public class Gem implements Comparable<Gem> {
 		return placementHelper(first, -1, types);
 	}
 	
+	//Returns the corresponding gem
 	public Bitmap getGem() {
 		return GEM_ARRAY[GEM_TYPE];
 	}
 	
+	//returns the corresponding border
 	public Bitmap getBorder() {
 		return BORDER_ARRAY[GEM_TYPE];
 	}
 	
+	//Returns the corresponding dead gem
 	public Bitmap getDead() {
 		return DEAD_ARRAY[GEM_TYPE];
 	}
