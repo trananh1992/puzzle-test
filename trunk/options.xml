@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <CheckBox android:text="@string/sound" android:id="@+id/sound" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/music" android:layout_alignLeft="@+id/music"></CheckBox>
+    <RadioGroup android:layout_height="wrap_content" android:id="@+id/rGroup" android:layout_width="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_marginLeft="15dp">
+    </RadioGroup>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reset" android:id="@+id/reset" android:layout_below="@+id/sound" android:layout_centerHorizontal="true" android:layout_marginTop="24dp"></Button>
+    <TextView android:id="@+id/tv" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/casspeed" android:layout_height="wrap_content" android:layout_below="@+id/rGroup" android:layout_alignLeft="@+id/music" android:layout_marginTop="27dp"></TextView>
+    <Spinner android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@+id/tv" android:layout_toRightOf="@+id/tv" android:layout_marginLeft="18dp" android:id="@+id/speed" android:prompt="@string/scores_prompt"></Spinner>
+    <CheckBox android:layout_width="wrap_content" android:text="@string/music" android:id="@+id/music" android:layout_height="wrap_content" android:layout_below="@+id/speed" android:layout_alignLeft="@+id/rGroup"></CheckBox>
+    
+</RelativeLayout>
