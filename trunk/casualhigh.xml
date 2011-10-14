@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:background="@drawable/background"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <ImageView android:id="@+id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/high_scores" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"></ImageView>
+    <Spinner android:id="@+id/spinner2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/imageView1" android:layout_alignParentLeft="true" android:layout_marginTop="15dp" android:prompt="@string/mode_prompt"></Spinner>
+    <Spinner android:prompt="@string/scores_prompt" android:visibility= "invisible" android:layout_marginTop = "10dp" android:layout_width="wrap_content" android:id="@+id/speedSpin" android:layout_height="wrap_content" android:layout_below="@+id/spinner2" android:layout_alignRight="@+id/imageView1"></Spinner>
+    <TextView android:id="@+id/casHighScore" android:visibility= "invisible" android:layout_marginTop = "15dp" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/casspeed" android:layout_height="wrap_content" android:layout_below="@+id/spinner2" android:layout_alignLeft="@+id/imageView1"></TextView>
+    <LinearLayout android:layout_width="fill_parent" android:layout_marginLeft = "10dp" android:layout_marginRight ="10dp" android:background="@drawable/hs"  android:layout_height="wrap_content" android:layout_below="@+id/speedSpin" android:layout_alignParentLeft="true" android:layout_marginTop="14dp" android:weightSum="1">
+        <TextView android:id="@+id/casualnames" android:layout_marginLeft = "50dp" android:gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:layout_width="102dp" android:layout_weight="0.34"></TextView>
+        <TextView android:id="@+id/casualscores" android:gravity="center_vertical" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:layout_width="144dp"></TextView>
+    </LinearLayout>
+</RelativeLayout>
