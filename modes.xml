@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background = "@drawable/background">
+    <Button android:text="@string/normal" android:id="@+id/normalmode" android:textColor="@drawable/button_text_color" android:layout_height="50dp" android:textSize="30dp" android:layout_width="250dp" android:background="@drawable/custom_button" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="224dp"></Button>
+    <Button android:text="@string/quickmode" android:id="@+id/quickmode" android:textColor="@drawable/button_text_color" android:layout_height="50dp" android:textSize="30dp" android:layout_width="250dp" android:background="@drawable/custom_button" android:layout_below="@+id/normalmode" android:layout_alignLeft="@+id/normalmode" android:layout_marginTop="30dp"></Button>
+    <Button android:text="@string/casual" android:id="@+id/casualmode" android:textColor="@drawable/button_text_color" android:layout_height="50dp" android:textSize="30dp" android:layout_width="250dp" android:background="@drawable/custom_button" android:layout_below="@+id/quickmode" android:layout_alignLeft="@+id/quickmode" android:layout_marginTop="30dp"></Button>
+    <ImageView android:src="@drawable/logo" android:layout_marginTop="17dp" android:layout_marginLeft="5dp" android:id="@+id/imageView1" android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_height="250dp" android:layout_width="300dp"></ImageView>
+    
+</RelativeLayout>
