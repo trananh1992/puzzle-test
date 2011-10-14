@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+    <ImageView android:src="@drawable/round_complete" android:layout_width="wrap_content" android:id="@+id/imageView1" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="17dp"></ImageView>
+    <TextView android:gravity="center" android:text="@string/press" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/round" android:layout_alignParentLeft="true" android:layout_marginTop="121dp"></TextView>
+    <TextView android:gravity="center" android:text="TextView" android:id="@+id/rcurrent" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/round" android:layout_alignParentLeft="true" android:layout_marginTop="50dp" android:layout_alignParentRight="true"></TextView>
+    <TextView android:gravity="center" android:text="TextView" android:id="@+id/round" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/imageView1" android:layout_alignParentLeft="true" android:layout_marginTop="21dp" android:layout_alignParentRight="true"></TextView>
+    
+</RelativeLayout>
