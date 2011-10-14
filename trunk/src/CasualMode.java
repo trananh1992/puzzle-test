@@ -28,6 +28,7 @@ public class CasualMode extends GemView {
 		}
 	}
 	
+	//Updates the time of play
 	private Runnable updateTime = new Runnable() {
 		public void run() {
 			current_high++;
@@ -39,6 +40,7 @@ public class CasualMode extends GemView {
 		}
 	};
 	
+	//Game over dialog
 	@Override
 	public void createDialog() {
 		View layout = LayoutInflater.from(context).inflate(R.layout.gameover, null);
@@ -70,6 +72,7 @@ public class CasualMode extends GemView {
 		builder.show();
 	}
 	
+	//Checks high scores
 	@Override
 	public void checkScores() {
 		mHandler.removeCallbacks(updateTime);
@@ -101,6 +104,7 @@ public class CasualMode extends GemView {
 		}
 	}
 	
+	//Saves high scores
 	private void saveHighScores(String username) {
 		SharedPreferences.Editor editor = scores.edit();
 		for(int i = 9; i >= target; i--) {
@@ -117,6 +121,7 @@ public class CasualMode extends GemView {
 
 	}
 	
+	//Sets the speed and starts the game
 	public void setSpeed(int speed) {
 		this.speed = speed;
 		moving_speed = 540 - (speed * 20);
@@ -125,6 +130,8 @@ public class CasualMode extends GemView {
 		mHandler.postDelayed(updateTime, 1000);
 	}
 	
+	//Resume handler
+	@Override
 	public void resume() {
 		super.resume();
 		if(!gameOver) {
@@ -132,12 +139,14 @@ public class CasualMode extends GemView {
 		}
 	}
 	
+	//Pause Handler
 	@Override
 	public void pause() {
 		super.pause();
 		mHandler.removeCallbacks(updateTime);
 	}
 	
+	//Draws the grid
 	@Override
 	public void onDraw(Canvas c) {
 		super.onDraw(c);
@@ -149,6 +158,7 @@ public class CasualMode extends GemView {
 		}
 	}
 	
+	//Returns the formatted score
 	public static String getTime(int score) {
 		String result = "";
 		result += "" + score/3600 + ":";
