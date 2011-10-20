@@ -50,8 +50,7 @@ public class GemView extends View implements OnGestureListener {
 	protected GestureDetector gDetector; //Detects gestures
 	protected Set<Gem> fallingGems; //Holds the gems that are falling
 	protected List<Set<Gem>> pausedGems; //Holds the gems that are paused and going to be added to the fallings
-	protected List<Set<Gem>> matchedGems; //LinkedList to hold the ArrayLists of matched Gems
-	//Would be easy to implement scoring, just see the size of the ArrayList you use. Simple.
+	protected List<Set<Gem>> matchedGems; //LinkedList to hold the Sets of matched Gems
 	protected Handler mHandler; //Handler for timing of gems and such.
 	protected boolean gemsFalling; //whether gems are falling
 	protected Map<Long, Gem> currentMatches; //The ordered gems (in timed order)
@@ -60,10 +59,10 @@ public class GemView extends View implements OnGestureListener {
 	protected boolean running; //whether the game is scrolling upwards
 	protected int moving_speed; //how fast the game is moving upwards
 	public boolean gameOver;
-	protected boolean fromMatches; //tells the fallings whether they are from a match or not
+	protected boolean fromMatches; //tells the fallings whether they are from a match or not (which changes their behavior)
 	protected boolean fastRow; //Longpress, means the row is increasing quickly
-	protected boolean musicPlay;
-	protected int gemTypes;
+	protected boolean musicPlay; //If the music is playing
+	protected int gemTypes; //Number of types in use.
 	protected List<Gem> firstList;
 	
 	protected long gameOverTime;
